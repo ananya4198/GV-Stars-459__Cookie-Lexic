@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--Formatting for the pop-up of the extension--> 
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie_Lexic</title>
+    <link rel="stylesheet" href="bulma.min.css" />
+    <script src="popup.js" defer></script>
+    <style> 
+    /* Styling background/body */
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: #bee2ff;
+      padding: 15px;
+      padding-right: 22px;
+    }
+    .container {
+      max-width: 590px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Styling title */
+    .title {
+      font-family: monospace;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+    /* Styling subtitles */
+    .subtitle {
+      font-family: monospace;
+      margin-top: 15px;
+    }
+    /* Styling buttons */
+      .buttons .button {
+        background-color: #bee2ff; 
+        color: #232689; 
+        border-radius: 10px; 
+        border-color: rgb(147, 147, 147);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      /* Font styles for font buttons */
+      #ArialButton {
+        font-family: Arial, sans-serif;
+        margin-left: 85px;
+      }
+      #VerdanaButton {
+        font-family: Verdana, sans-serif;
+        margin-left: 68px;
+      }
+      #OpenDyslexicButton {
+        font-family: 'OpenDyslexia', sans-serif;
+        margin-left: 50px;
+      }
+      #TimesNewRomanButton {
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 40px;
+      }
+      /* Overlay styles */
+      #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+      z-index: 1000; /* Ensure it's on top of other elements */
+      display: none; /* Initially hide the overlay */
+    }
+      </style>
+  </head>
+  <body>
+    <div id="overlay"></div>
+  <!--Create a container--> 
+  <div class="container m-1 has-text-centered">
+      <h1 class="title">Cookie_Lexic</h1>
+      <div class="field">
+        <h6 class="subtitle is-6 is-underlined has-text-gray">Fonts</h6>
+
+        <!--Making buttons--> 
+              <div class="buttons"> 
+                <button id="ArialButton" class="button">Arial</button>
+                <button id="VerdanaButton" class="button">Verdana</button>
+                <button id="OpenDyslexicButton" class="button">OpenDyslexia</button>
+                <button id="TimesNewRomanButton" class="button">Times New Roman</button>
+            </div>
+      </div>
+  <!--Create a new field and label--> 
+        <div class="field">
+          <h6 class="subtitle is-6 is-underlined has-text-gray">Toggle Assistance</h6>
+
+  <!--Making checkboxes that can toggle on and off certian functions--> 
+          <label class="checkbox">
+            <input type="checkbox"  />
+            Turn Off All
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" />
+            Line Highlight Window
+          </label>
+      </div>
+
+
+ <!--Set up colors-->
+  <!--First line of colors-->
+  <div class="control" >
+      <h6 class="subtitle is-6 is-underlined has-text-gray">Color Tint</h6>
+    
+      <label class="radio" style="accent-color:rgb(140, 187, 235)">
+        Blue
+        <input type="radio" id="BlueColor" name="color" />
+      </label>
+    
+      <label class="radio" style="accent-color:rgb(235, 155, 222)">
+        Pink
+        <input type="radio" id="PinkColor" name="color" />
+      </label>
+    
+      <label class="radio" style="accent-color:rgb(235, 200, 140)">
+        Orange
+        <input type="radio" id="OrangeColor" name="color" />
+      </label>
+    
+      <label class="radio" style="accent-color:rgb(121, 225, 175)">
+        Green
+        <input type="radio" id="GreenColor" name="color" />
+      </label>
+  
+  </div>
+
+  <!--Second line of colors-->
+   <!--Mostly bc aesthetic and we love that--> 
+  <div class="control" >  
+      <label class="radio" style="accent-color:rgb(189, 146, 228)">
+      Purple
+      <input type="radio" id="PurpleColor" name="color" />
+    </label>
+
+    <label class="radio" style="accent-color:rgb(134, 129, 228)">
+      Indigo
+      <input type="radio" id="IndigoColor" name="color" />
+    </label>
+    
+    <label class="radio" style="accent-color:rgb(235, 140, 140)">
+      Red
+      <input type="radio" id="RedColor" name="color" />
+    </label>
+  </div>
+
+  <!--Sliders--> 
+    <div class="field">
+      <h6 class="subtitle is-6 is-underlined has-text-gray">Manipulate Features</h6>
+
+      <h6 class="subtitle is-6">Text Size:</h6>
+
+      <div class="slidecontainer">
+        <input id="TextSizeSlider" type="range" min="1" max="100" value="1" style = "accent-color:rgb(140, 187, 235)" class="slider" id="myRange">
+      </div>
+
+      <h6 class="subtitle is-6">Window Size:</h6>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="1" style = "accent-color:rgb(140, 187, 235)" class="slider" id="myRange">
+      </div>
+
+  <!--Ending Design & Signature-->
+  <span style="font-size:300%;color:rgb(140, 187, 235);">&starf;</span>
+  <label class="label" style="margin-bottom: 20px;">gv_stars</label>
+</div>
+</div>
+  </body>
+  </html>
+</html>
