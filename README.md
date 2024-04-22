@@ -1,6 +1,6 @@
-Cookie_Lexic
+<h1>Cookie_Lexic</h1>
 
-Team 459: GV STars
+<h3>Team 459: GV Stars</h3>
 
 Overview:
 Hello! This GitHub contains all the code we used in our extension; Cookie_Lexic
